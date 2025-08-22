@@ -602,16 +602,26 @@ def get_violation_info():
 
 if __name__ == "__main__":
     print("Starting Helmet Detection System with Flask Web Interface...")
-    print("\nAccess the web interface at: http://localhost:5000")
+
     try:
         detector = HelmetDetectionSystem()
         print("Detection system initialized successfully!")
         print("Web server starting...")
-        app.run(host="0.0.0.0", port=5000, debug=False, threaded=True)
+
+        # Render environment ke PORT ko use karo
+        port = int(os.environ.get("PORT", 10000))
+        app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
+
     except KeyboardInterrupt:
         print("\nSystem interrupted by user")
         if detector:
             detector.stop()
+    except Exception as e:
+        print(f"System error: {e}")
+        logging.error(f"System error: {e}")
+        if detector:
+            detector.stop()
+
     except Exception as e:
         print(f"System error: {e}")
         logging.error(f"System error: {e}")
