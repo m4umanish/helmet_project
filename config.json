@@ -1,0 +1,42 @@
+{
+    "model_path": "C:/Users/hp/Desktop/Helmet_project/runs/detect/train/weights/best.pt",
+    "cameras": {
+        "camera_1": {
+            "name": "Main Entrance",
+            "url": "rtsp://admin:admin%40123@103.69.44.194:554/cam/realmonitor?channel=1&subtype=0"
+        },
+        "camera_2": {
+            "name": "Workshop Area",
+            "url": "rtsp://admin:admin%40123@103.69.44.194:554/cam/realmonitor?channel=2&subtype=0"
+        },
+        "camera_3": {
+            "name": "Loading Dock",
+            "url": "rtsp://admin:admin%40123@103.69.44.194:554/cam/realmonitor?channel=3&subtype=0"
+        },
+        "camera_4": {
+            "name": "Storage Area",
+            "url": "rtsp://admin:admin%40123@103.69.44.194:554/cam/realmonitor?channel=4&subtype=0"
+        }
+    },
+    "active_camera": "camera_3",
+    "ffmpeg_path": "C:/ffmpeg/bin/ffmpeg.exe",
+    "use_opencv_fallback": true,
+    "save_dir": "Violations",
+    "log_dir": "Logs",
+    "frame_width": 1920,
+    "frame_height": 1080,
+    "display_width": 1280,
+    "display_height": 720,
+    "confidence_threshold": 0.5,
+    "movement_threshold": 100,
+    "stabilization_time": 2.0,
+    "violation_cooldown_seconds": 30,
+    "max_reconnect_attempts": 5,
+    "email_notifications": false,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "email_user": "",
+    "email_password": "",
+    "email_recipients": [],
+    "rtsp_timeout": 10
+}
