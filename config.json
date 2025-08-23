@@ -1,5 +1,5 @@
 {
-    "model_path": "C:/Users/hp/Desktop/Helmet_project/runs/detect/train/weights/best.pt",
+    "model_path": "model_path": "weights/best.pt",
     "cameras": {
         "camera_1": {
             "name": "Main Entrance",
@@ -39,4 +39,5 @@
     "email_password": "",
     "email_recipients": [],
     "rtsp_timeout": 10
+
 }
