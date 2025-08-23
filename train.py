@@ -1,3 +1,16 @@
+import os
+import gdown
+
+# ---------------- Google Drive से Model Auto Download ----------------
+MODEL_PATH = "weights/best.pt"
+if not os.path.exists(MODEL_PATH):
+    os.makedirs("weights", exist_ok=True)
+    url = "https://drive.google.com/uc?id=185SxKRhp8mkQs3HComtEq1oU7uf7u2va"  # तुम्हारा FILE_ID डाल दिया गया है
+    print("Downloading model from Google Drive...")
+    gdown.download(url, MODEL_PATH, quiet=False)
+
+# ---------------- अब नीचे तुम्हारा बाकी का detection / Flask code आएगा ----------------
+
 import cv2
 import numpy as np
 from ultralytics import YOLO
@@ -627,6 +640,7 @@ if __name__ == "__main__":
         logging.error(f"System error: {e}")
         if detector:
             detector.stop()
+
 
 
 
