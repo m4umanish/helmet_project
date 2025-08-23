@@ -36,9 +36,9 @@ class HelmetDetectionSystem:
         self.detection_thread = None
 
     def load_config(self, config_path):
-        """Load configuration from JSON file with multiple camera support"""
-        default_config = {
-            "model_path": "C:/Users/hp/Desktop/Helmet_project/runs/detect/train/weights/best.pt",
+    """Load configuration from JSON file with multiple camera support"""
+    default_config = {
+        "model_path": "best.pt",
             "cameras": {
                 "camera_1": {
                     "name": "Main Entrance",
@@ -627,3 +627,4 @@ if __name__ == "__main__":
         logging.error(f"System error: {e}")
         if detector:
             detector.stop()
+
