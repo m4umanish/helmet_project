@@ -1,4 +1,4 @@
-{{
+{
     "model_path": "weights/best.pt",
     "cameras": {
         "camera_1": {
@@ -41,3 +41,4 @@
     "rtsp_timeout": 10
 
 }
+
